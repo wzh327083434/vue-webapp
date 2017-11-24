@@ -13,7 +13,8 @@ Vue.use(vueRouter);
 //导入首页和购物车组件
 import home from './components/home.vue';
 import shopcar from './components/shopcar/shopcar.vue';
-import goodslist from './components/shopcar/goodslist.vue';
+import goodslist from './components/goods/goodslist.vue';
+import goodsinfo from './components/goods/goodsinfo.vue';
 
 import newslist from './components/news/newslist.vue';
 import newsinfo from './components/news/newsinfo.vue';
@@ -53,6 +54,10 @@ var router = new vueRouter({
 		{
 			path:'/goods/goodslist',
 			component:goodslist
+		},
+		{
+			path:'/goods/goodsinfo',
+			component:goodsinfo
 		},
 		{
 			path:'/shopcar',
