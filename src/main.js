@@ -13,12 +13,16 @@ Vue.use(vueRouter);
 //导入首页和购物车组件
 import home from './components/home.vue';
 import shopcar from './components/shopcar/shopcar.vue';
+//商品列表，商品详情
 import goodslist from './components/goods/goodslist.vue';
 import goodsinfo from './components/goods/goodsinfo.vue';
-
+//商品图文详情，评论
+import goodsdesc from './components/goods/goodsdesc.vue';
+import goodscomment from './components/goods/goodscomment.vue';
+//新闻列表，新闻详情
 import newslist from './components/news/newslist.vue';
 import newsinfo from './components/news/newsinfo.vue';
-
+//图片列表，图片详情
 import photolist from "./components/photo/photolist.vue";
 import photoinfo from "./components/photo/photoinfo.vue";
 
@@ -56,8 +60,16 @@ var router = new vueRouter({
 			component:goodslist
 		},
 		{
-			path:'/goods/goodsinfo',
+			path:'/goods/goodsinfo/:id',
 			component:goodsinfo
+		},
+		{
+			path:'/goods/goodsdesc/:id',
+			component:goodsdesc
+		},
+		{
+			path:'/goods/goodscomment/:id',
+			component:goodscomment
 		},
 		{
 			path:'/shopcar',

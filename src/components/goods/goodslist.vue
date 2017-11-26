@@ -3,7 +3,7 @@
 		<div class="mui-content" style="background-color:#fff">
 		    <ul class="mui-table-view mui-grid-view">
 		        <li class="mui-table-view-cell mui-media mui-col-xs-6" v-for="item in list">
-		            <router-link to="/goods/goodsinfo">
+		            <router-link v-bind="{to:'/goods/goodsinfo/'+item.id}">
 		                <img class="mui-media-object" :src="item.img_url">
 		                <div class="mui-media-body">{{item.title}}</div>
 		                <div id="desc">
@@ -20,7 +20,7 @@
 		        </li>
 		    </ul>    
 		</div>
-
+		
 	</div>
 </template>
 <script>
